@@ -2,9 +2,9 @@
   "name": "@handie/http",
   "version": "0.0.0",
   "description": "HTTP client with normalized response result",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "typings": "src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "private": true,
   "engines": {
     "node": ">=14.15.3"
