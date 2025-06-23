@@ -14,6 +14,6 @@ _site
 
 bower_components
 node_modules
-dist
+# dist
 
 pnpm-lock.yaml

@@ -1,0 +1,10 @@
+import { type DataValue } from "@handie/runtime-core";
+import type { RequestConfig, ResponseResult } from "./typing";
+declare function setGlobalBaseUrl(baseUrl: string): void;
+declare function isServerSide(inServer?: boolean): boolean;
+declare function request(url: string, method: string, data?: Record<string, DataValue> | string, config?: RequestConfig): Promise<Response>;
+declare function generateSuccessResponse<VT extends DataValue = DataValue>(data: VT, message?: string, statusCode?: number | string): ResponseResult<VT>;
+declare function generateFailedResponse(message: string, statusCode?: number | string, extra?: ResponseResult["extra"]): ResponseResult<undefined>;
+declare function normalizeResponse<VT extends DataValue = DataValue>(res: Response): Promise<ResponseResult<VT>>;
+declare function normalizeRestfulResponse<VT extends DataValue = DataValue>(res: Response): Promise<ResponseResult<VT>>;
+export { setGlobalBaseUrl, isServerSide, request, generateSuccessResponse, generateFailedResponse, normalizeResponse, normalizeRestfulResponse, };

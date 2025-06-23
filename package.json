@@ -2,9 +2,9 @@
   "name": "@handie/http",
   "version": "0.0.0",
   "description": "HTTP client with normalized response result",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
-  "typings": "src/index.ts",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "typings": "src/index.d.ts",
   "private": true,
   "engines": {
     "node": ">=14.15.3"
@@ -12,12 +12,13 @@
   "peerDependencies": {
     "@handie/runtime-core": "^0.0.0"
   },
-  "dependencies": {
-    "typescript": "5.8.3"
-  },
   "devDependencies": {
     "@handie/runtime-core": "0.0.13-5",
-    "@types/node": "24.0.3"
+    "@types/node": "24.0.3",
+    "tslib": "^2.8.1",
+    "typescript": "5.8.3"
   },
-  "scripts": {}
+  "scripts": {
+    "build": "tsc"
+  }
 }
