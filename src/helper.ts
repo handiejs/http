@@ -1,4 +1,5 @@
-import { type DataValue, isBoolean, isPlainObject, omit } from "@handie/runtime-core";
+import { isBoolean, isPlainObject, omit } from '@ntks/toolbox';
+import type { DataValue } from "@handie/runtime-core";
 
 import type { RequestConfig, ResponseResult } from "./typing";
 

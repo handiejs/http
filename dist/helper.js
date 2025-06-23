@@ -1,5 +1,5 @@
 import { __awaiter, __rest } from "tslib";
-import { isBoolean, isPlainObject, omit } from "@handie/runtime-core";
+import { isBoolean, isPlainObject, omit } from '@ntks/toolbox';
 let globalBaseUrl = "";
 function setGlobalBaseUrl(baseUrl) {
     globalBaseUrl = baseUrl;

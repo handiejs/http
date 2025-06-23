@@ -1,5 +1,5 @@
 import { __awaiter, __rest } from "tslib";
-import { isFunction, isPlainObject } from "@handie/runtime-core";
+import { isFunction, isPlainObject } from '@ntks/toolbox';
 import { isServerSide, request, normalizeResponse } from "./helper";
 class HttpClient {
     constructor({ baseUrl, headers, normalizer = normalizeResponse }) {

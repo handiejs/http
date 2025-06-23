@@ -1,4 +1,5 @@
-import { type DataValue, isFunction, isPlainObject } from "@handie/runtime-core";
+import { isFunction, isPlainObject } from '@ntks/toolbox';
+import type { DataValue } from "@handie/runtime-core";
 
 import type { ResponseInterceptor, RequestConfig, HttpClientInitializer, IHttpClient } from "./typing";
 import { isServerSide, request, normalizeResponse } from "./helper";

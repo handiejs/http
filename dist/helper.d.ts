@@ -1,4 +1,4 @@
-import { type DataValue } from "@handie/runtime-core";
+import type { DataValue } from "@handie/runtime-core";
 import type { RequestConfig, ResponseResult } from "./typing";
 declare function setGlobalBaseUrl(baseUrl: string): void;
 declare function isServerSide(inServer?: boolean): boolean;

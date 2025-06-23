@@ -1,4 +1,4 @@
-import { type DataValue } from "@handie/runtime-core";
+import type { DataValue } from "@handie/runtime-core";
 import type { ResponseInterceptor, RequestConfig, HttpClientInitializer, IHttpClient } from "./typing";
 declare class HttpClient implements IHttpClient {
     private baseUrl?;
