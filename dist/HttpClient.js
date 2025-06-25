@@ -15,7 +15,7 @@ class HttpClient {
             const { inServer, headers } = config, others = __rest(config, ["inServer", "headers"]);
             const res = yield request(url, method, data, Object.assign(Object.assign({}, others), { baseUrl: this.baseUrl, inServer: isServerSide(inServer), headers: Object.assign(Object.assign({}, this.headers), headers) }));
             const normalized = yield this.normalizeResponse(res);
-            return this.resInterceptor ? this.resInterceptor(normalized, config) : normalized;
+            return this.resInterceptor ? this.resInterceptor(normalized, config, res) : normalized;
         });
     }
     get(url_1) {

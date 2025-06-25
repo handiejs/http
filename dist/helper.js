@@ -96,21 +96,17 @@ function normalizeResponse(res) {
 }
 function normalizeRestfulResponse(res) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log(`[HTTP] ${res.status} ${res.url}`);
         // Get the response text first to check if it's valid JSON
         const responseText = yield res.text();
         if (!responseText) {
-            console.warn(`[HTTP] Empty response from: ${res.url}`);
-            return generateFailedResponse("Empty response received", res.status);
+            return generateFailedResponse('Empty response received', res.status);
         }
         let jsonData;
         try {
             jsonData = JSON.parse(responseText);
         }
         catch (error) {
-            console.error(`[HTTP] JSON parse error for ${res.url}:`, error instanceof Error ? error.message : 'Unknown error');
-            console.error(`[HTTP] Response content (first 200 chars):`, responseText.substring(0, 200));
-            return generateFailedResponse(`Invalid JSON response: ${error instanceof Error ? error.message : 'Unknown error'}`, res.status, { rawResponse: responseText.substring(0, 500) });
+            return generateFailedResponse(`Invalid JSON response: ${error instanceof Error ? error.message : 'Unknown error'}`, res.status);
         }
         const defaultCode = `${res.status}`;
         if (res.ok) {

@@ -8,7 +8,7 @@ type RequestConfig = RequestInit & {
     inServer?: boolean;
     noToast?: boolean;
 };
-type ResponseInterceptor = (res: ResponseResult, config: RequestConfig) => ResponseResult;
+type ResponseInterceptor = (normalizedResponse: ResponseResult, config: RequestConfig, rawResponse: Response) => ResponseResult;
 type HttpClientInitializer = {
     baseUrl?: string;
     headers?: RequestConfig["headers"];
