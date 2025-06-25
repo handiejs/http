@@ -36,7 +36,7 @@ class HttpClient implements IHttpClient {
     });
     const normalized = await this.normalizeResponse(res);
 
-    return this.resInterceptor ? this.resInterceptor(normalized, config) : normalized;
+    return this.resInterceptor ? this.resInterceptor(normalized, config, res) : normalized;
   }
 
   public async get(url: string, config: RequestConfig = {}) {

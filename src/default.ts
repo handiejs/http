@@ -1,5 +1,5 @@
-import HttpClient from "./HttpClient";
+import HttpClient from './HttpClient';
 
-const httpClient = new HttpClient({ baseUrl: "/" });
+const httpClient = new HttpClient({ baseUrl: '/' });
 
 export default httpClient;
